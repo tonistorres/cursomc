@@ -1,5 +1,5 @@
 package br.com.inove.conhecimento.cursomc.domain;
-
+//CAMADA DTO
 import java.io.Serializable;
 
 import javax.persistence.Entity;
