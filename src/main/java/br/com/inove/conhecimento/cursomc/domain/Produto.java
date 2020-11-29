@@ -12,6 +12,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 /** agora fazer o mapeamento da classe para o JPA */
 
 @Entity // a classe Produto é um entidade(tabela)
@@ -33,6 +35,7 @@ public class Produto implements Serializable {
 	 * Produto tem uma ou mais Categorias Produto 1 <----> 1* Categorias, logo em
 	 * produtos teremos uma lista de Categorias.
 	 */
+@JsonBackReference	
 @ManyToMany
 @JoinTable(name="PRODUTO_CATEGORIA",
 	joinColumns=@JoinColumn(name="produto_id"),
